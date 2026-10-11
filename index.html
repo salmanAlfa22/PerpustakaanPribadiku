@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rak Bukuku</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>📚 Rak Bukuku</h1>
+    <p>Catat buku yang sedang, ingin, dan sudah kamu baca.</p>
+  </header>
+
+  <form id="form">
+    <input id="judul" placeholder="Judul buku" maxlength="120" required>
+    <input id="penulis" placeholder="Penulis" maxlength="80">
+    <select id="status">
+      <option value="want">Ingin dibaca</option>
+      <option value="reading">Sedang dibaca</option>
+      <option value="done">Selesai</option>
+    </select>
+    <input id="catatan" placeholder="Catatan (opsional)" maxlength="200">
+    <button type="submit">Tambah</button>
+  </form>
+
+  <div class="tabs" id="tabs">
+    <button data-s="all" class="on">Semua <i id="c-all">0</i></button>
+    <button data-s="reading">Sedang dibaca <i id="c-reading">0</i></button>
+    <button data-s="want">Ingin dibaca <i id="c-want">0</i></button>
+    <button data-s="done">Selesai <i id="c-done">0</i></button>
+  </div>
+
+  <ul id="list"></ul>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
